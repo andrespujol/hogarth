@@ -1,0 +1,80 @@
+.hero-container {
+    display: flex;
+}
+.hero-copy a {
+    color: #fff;
+    text-decoration: none;
+}
+.hero-unit-moon-exploration .hero-image, .hero-image-1 {
+    background-position: top center;
+    width: 50%;
+    height: 960px;
+}
+.hero-copy {
+    width: 50%;
+}
+.hero-image-1 {
+    background: url("../images/final-frontier_large.jpg");
+    background-size: 100% 960px;
+    width: 100%;
+}
+@media only screen and (min-width:1069px) {
+    .hero-copy {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 736px) and (max-width:1068px){
+    .hero-container {
+        flex-direction: row;
+    }
+    .hero-unit-moon-exploration .hero-image, .hero-image-1 {
+        height: 712px;
+    }
+        /* space */
+    .hero-image-1 {
+        background: url("../images/final-frontier_medium.jpg");
+        background-size: 100% 712px;
+        height: 712px;
+    }
+}
+@media only screen and (max-width: 735px){
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-unit-moon-exploration .hero-image, .hero-image-1 {
+        height: 490px;
+    }
+    /* space */
+    .hero-image-1{
+        background-size: 100% 490px;
+        background: url("../images/final-frontier_small.jpg");
+        height: 490px;
+        background-position: top center;
+        margin-bottom: 0;
+    }
+}
+
+/* timeline */
+    /* primero use grid (con un contenedor en html), pero todas las cards me quedaban iguales y no lograba mantener el diseño. Y para respetarlo, opté por esta manera */
+.dos {
+    display: none;
+}
+@media only screen and (min-width:992px) {
+    .uno {
+        display: none;
+    }
+    .dos {
+        display: flex;
+    }
+}
+
+/* gallery */
+
+@media only screen and (min-width: 737px) {
+    @supports (display: grid){
+        .gallery-grid{
+            display: grid;
+        }
+    }
+}
